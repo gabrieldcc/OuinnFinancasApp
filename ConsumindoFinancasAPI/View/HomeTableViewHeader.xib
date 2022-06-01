@@ -80,9 +80,11 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="dolarLabel" destination="eZ7-3T-8jM" id="SFg-RE-7ld"/>
-                <outlet property="ibovespaLabel" destination="18L-k7-nFh" id="P2p-Dd-Umd"/>
-                <outlet property="selicLabel" destination="ZwV-Q1-e94" id="9uZ-Pm-pOq"/>
+                <outlet property="dolarLabel" destination="ZwV-Q1-e94" id="VHz-sN-Oe6"/>
+                <outlet property="headerView" destination="uab-xP-TKC" id="SMF-Dm-2Yi"/>
+                <outlet property="ibovespaLabel" destination="18L-k7-nFh" id="9aP-je-e05"/>
+                <outlet property="infoView" destination="ZyY-yN-jjt" id="hHs-1g-YnV"/>
+                <outlet property="selicLabel" destination="eZ7-3T-8jM" id="dbf-iM-Js0"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="97.767857142857139"/>
         </view>

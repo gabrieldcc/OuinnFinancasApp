@@ -10,33 +10,18 @@ import UIKit
 class ViewController: UIViewController {
 
     
+    @IBOutlet weak var homeTableView: UITableView!
     
     //MARK: Life Cycle View
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//
-//        DolarAPI().makeRequest { (objetoDecodificado) in
-//            self.dolarLabel.text = "Dólar: \(objetoDecodificado.USDBRL.ask)"
-//            self.ibovespaLabel.text = "Ibovespa: \( self.ibovespa)"
-//            self.selicLabel.text = "Selic: \( self.selic)"
-//
-           homeTableView.dataSource = self
-            homeTableView.delegate = self
+
+            self.homeTableView.dataSource = self
+            self.homeTableView.delegate = self
         }
-    
-    @IBOutlet weak var homeTableView: UITableView!
-    
-    
-    
-    
-    
-    
-    
-    
-    }
-    
-    
+
+}
+
 
 
 extension ViewController: UITableViewDataSource {
@@ -59,6 +44,7 @@ extension ViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = Bundle.main.loadNibNamed("HomeTableViewHeader", owner: self, options: nil)?.first as? HomeTableViewHeader
+        header?.configuraViewHeader()
         
         return header
     }
