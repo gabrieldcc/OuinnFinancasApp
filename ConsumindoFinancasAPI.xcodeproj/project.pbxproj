@@ -17,6 +17,7 @@
 		65426AF72842713F006B87E4 /* ConsumindoFinancasAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65426AF62842713F006B87E4 /* ConsumindoFinancasAPITests.swift */; };
 		65426B012842713F006B87E4 /* ConsumindoFinancasAPIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65426B002842713F006B87E4 /* ConsumindoFinancasAPIUITests.swift */; };
 		65426B032842713F006B87E4 /* ConsumindoFinancasAPIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65426B022842713F006B87E4 /* ConsumindoFinancasAPIUITestsLaunchTests.swift */; };
+		65A4E7672847D3EB00B65279 /* DolarAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A4E7662847D3EB00B65279 /* DolarAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		65426B002842713F006B87E4 /* ConsumindoFinancasAPIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsumindoFinancasAPIUITests.swift; sourceTree = "<group>"; };
 		65426B022842713F006B87E4 /* ConsumindoFinancasAPIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsumindoFinancasAPIUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		65426B0F28427F7B006B87E4 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		65A4E7662847D3EB00B65279 /* DolarAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DolarAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +84,6 @@
 		65426AD02842713D006B87E4 = {
 			isa = PBXGroup;
 			children = (
-				65426B0F28427F7B006B87E4 /* MyPlayground.playground */,
 				65426ADB2842713D006B87E4 /* ConsumindoFinancasAPI */,
 				65426AF52842713F006B87E4 /* ConsumindoFinancasAPITests */,
 				65426AFF2842713F006B87E4 /* ConsumindoFinancasAPIUITests */,
@@ -103,13 +104,14 @@
 		65426ADB2842713D006B87E4 /* ConsumindoFinancasAPI */ = {
 			isa = PBXGroup;
 			children = (
-				65426ADC2842713D006B87E4 /* AppDelegate.swift */,
-				65426ADE2842713D006B87E4 /* SceneDelegate.swift */,
-				65426AE02842713D006B87E4 /* ViewController.swift */,
-				65426AE22842713D006B87E4 /* Main.storyboard */,
+				65A4E7622847D2AD00B65279 /* Model */,
+				65A4E7632847D2BE00B65279 /* View */,
+				65A4E7642847D2C400B65279 /* Controller */,
+				65A4E7652847D2DA00B65279 /* AppDelegate */,
 				65426AE82842713F006B87E4 /* Assets.xcassets */,
 				65426AEA2842713F006B87E4 /* LaunchScreen.storyboard */,
 				65426AED2842713F006B87E4 /* Info.plist */,
+				65426B0F28427F7B006B87E4 /* MyPlayground.playground */,
 				65426AE52842713D006B87E4 /* ConsumindoFinancasAPI.xcdatamodeld */,
 			);
 			path = ConsumindoFinancasAPI;
@@ -130,6 +132,39 @@
 				65426B022842713F006B87E4 /* ConsumindoFinancasAPIUITestsLaunchTests.swift */,
 			);
 			path = ConsumindoFinancasAPIUITests;
+			sourceTree = "<group>";
+		};
+		65A4E7622847D2AD00B65279 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				65A4E7662847D3EB00B65279 /* DolarAPI.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		65A4E7632847D2BE00B65279 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				65426AE22842713D006B87E4 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		65A4E7642847D2C400B65279 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				65426AE02842713D006B87E4 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		65A4E7652847D2DA00B65279 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				65426ADC2842713D006B87E4 /* AppDelegate.swift */,
+				65426ADE2842713D006B87E4 /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +299,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				65426AE12842713D006B87E4 /* ViewController.swift in Sources */,
+				65A4E7672847D3EB00B65279 /* DolarAPI.swift in Sources */,
 				65426ADD2842713D006B87E4 /* AppDelegate.swift in Sources */,
 				65426AE72842713D006B87E4 /* ConsumindoFinancasAPI.xcdatamodeld in Sources */,
 				65426ADF2842713D006B87E4 /* SceneDelegate.swift in Sources */,
