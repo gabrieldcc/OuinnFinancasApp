@@ -18,6 +18,7 @@ class ViewController: UIViewController {
 
             self.homeTableView.dataSource = self
             self.homeTableView.delegate = self
+            self.homeTableView.register(UINib(nibName: "GastosFixosTableViewCell", bundle: nil), forCellReuseIdentifier: "GastosFixosTableViewCell")
         }
 
 }
@@ -30,10 +31,17 @@ extension ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
-        cell.textLabel?.text = "ola"
         
-        return cell
+       guard let cellGastosFixos = tableView.dequeueReusableCell(withIdentifier: "GastosFixosTableViewCell") as? GastosFixosTableViewCell else {
+            fatalError("error to create GastosFixosTableViewCell")
+           
+           
+        }
+            return cellGastosFixos
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        200
     }
     
     
