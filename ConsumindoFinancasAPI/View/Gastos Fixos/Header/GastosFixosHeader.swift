@@ -9,12 +9,22 @@ import UIKit
 
 class GastosFixosHeader: UIView {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
 
+    //MARK: IBOutlets
+    @IBOutlet weak var headerView: UIView!
+    @IBOutlet weak var tipoDeGastoTextField: UITextField!
+    @IBOutlet weak var valorFixoTextField: UITextField!
+
+    //MARK: IBAction
+    @IBAction func addButton(_ sender: Any) {
+    }
+    
+    
+    
+    //MARK: Metodos
+    func configuraHeader() {
+        headerView.layer.cornerRadius = 10
+        headerView.layer.masksToBounds = true
+
+    }
 }

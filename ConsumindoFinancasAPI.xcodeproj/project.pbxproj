@@ -17,9 +17,16 @@
 		65426AF72842713F006B87E4 /* ConsumindoFinancasAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65426AF62842713F006B87E4 /* ConsumindoFinancasAPITests.swift */; };
 		65426B012842713F006B87E4 /* ConsumindoFinancasAPIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65426B002842713F006B87E4 /* ConsumindoFinancasAPIUITests.swift */; };
 		65426B032842713F006B87E4 /* ConsumindoFinancasAPIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65426B022842713F006B87E4 /* ConsumindoFinancasAPIUITestsLaunchTests.swift */; };
+		65479CDA284A84C900E9CF13 /* GastosFixosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65479CD8284A84C900E9CF13 /* GastosFixosViewController.swift */; };
+		65479CDB284A84C900E9CF13 /* GastosFixosViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65479CD9284A84C900E9CF13 /* GastosFixosViewController.xib */; };
+		656B2731284AA86A00183912 /* GastosFixosHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 656B2730284AA86A00183912 /* GastosFixosHeader.xib */; };
+		656B2733284AA88700183912 /* GastosFixosHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656B2732284AA88700183912 /* GastosFixosHeader.swift */; };
+		656B2735284E249400183912 /* GastosFixosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656B2734284E249400183912 /* GastosFixosViewModel.swift */; };
 		65A4E7672847D3EB00B65279 /* DolarAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A4E7662847D3EB00B65279 /* DolarAPI.swift */; };
 		65A4E7692848048300B65279 /* HomeTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65A4E7682848048300B65279 /* HomeTableViewHeader.xib */; };
 		65A4E76B284806B100B65279 /* HomeTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A4E76A284806B100B65279 /* HomeTableViewHeader.swift */; };
+		65A4E7702848EFE000B65279 /* GastosFixosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A4E76E2848EFE000B65279 /* GastosFixosTableViewCell.swift */; };
+		65A4E7712848EFE000B65279 /* GastosFixosTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65A4E76F2848EFE000B65279 /* GastosFixosTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,9 +62,16 @@
 		65426B002842713F006B87E4 /* ConsumindoFinancasAPIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsumindoFinancasAPIUITests.swift; sourceTree = "<group>"; };
 		65426B022842713F006B87E4 /* ConsumindoFinancasAPIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsumindoFinancasAPIUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		65426B0F28427F7B006B87E4 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		65479CD8284A84C900E9CF13 /* GastosFixosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GastosFixosViewController.swift; sourceTree = "<group>"; };
+		65479CD9284A84C900E9CF13 /* GastosFixosViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GastosFixosViewController.xib; sourceTree = "<group>"; };
+		656B2730284AA86A00183912 /* GastosFixosHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GastosFixosHeader.xib; sourceTree = "<group>"; };
+		656B2732284AA88700183912 /* GastosFixosHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GastosFixosHeader.swift; sourceTree = "<group>"; };
+		656B2734284E249400183912 /* GastosFixosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GastosFixosViewModel.swift; sourceTree = "<group>"; };
 		65A4E7662847D3EB00B65279 /* DolarAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DolarAPI.swift; sourceTree = "<group>"; };
 		65A4E7682848048300B65279 /* HomeTableViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewHeader.xib; sourceTree = "<group>"; };
 		65A4E76A284806B100B65279 /* HomeTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewHeader.swift; sourceTree = "<group>"; };
+		65A4E76E2848EFE000B65279 /* GastosFixosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GastosFixosTableViewCell.swift; sourceTree = "<group>"; };
+		65A4E76F2848EFE000B65279 /* GastosFixosTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GastosFixosTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,8 +124,9 @@
 			children = (
 				65A4E7622847D2AD00B65279 /* Model */,
 				65A4E7632847D2BE00B65279 /* View */,
-				65A4E7642847D2C400B65279 /* Controller */,
+				65479CAD2849678400E9CF13 /* ViewModel */,
 				65A4E7652847D2DA00B65279 /* AppDelegate */,
+				65479CAE2849679800E9CF13 /* Mock */,
 				65426AE82842713F006B87E4 /* Assets.xcassets */,
 				65426AEA2842713F006B87E4 /* LaunchScreen.storyboard */,
 				65426AED2842713F006B87E4 /* Info.plist */,
@@ -138,6 +153,69 @@
 			path = ConsumindoFinancasAPIUITests;
 			sourceTree = "<group>";
 		};
+		65479CAD2849678400E9CF13 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				656B2734284E249400183912 /* GastosFixosViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		65479CAE2849679800E9CF13 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		65479CCF284A800A00E9CF13 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				65426AE22842713D006B87E4 /* Main.storyboard */,
+				65426AE02842713D006B87E4 /* ViewController.swift */,
+				65479CD0284A802700E9CF13 /* HomeHeader */,
+				65479CD1284A803B00E9CF13 /* Cells */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		65479CD0284A802700E9CF13 /* HomeHeader */ = {
+			isa = PBXGroup;
+			children = (
+				65A4E7682848048300B65279 /* HomeTableViewHeader.xib */,
+				65A4E76A284806B100B65279 /* HomeTableViewHeader.swift */,
+			);
+			path = HomeHeader;
+			sourceTree = "<group>";
+		};
+		65479CD1284A803B00E9CF13 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				65A4E76F2848EFE000B65279 /* GastosFixosTableViewCell.xib */,
+				65A4E76E2848EFE000B65279 /* GastosFixosTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		65479CD2284A80EA00E9CF13 /* Gastos Fixos */ = {
+			isa = PBXGroup;
+			children = (
+				65479CD8284A84C900E9CF13 /* GastosFixosViewController.swift */,
+				65479CD9284A84C900E9CF13 /* GastosFixosViewController.xib */,
+				65479CD3284A810200E9CF13 /* Header */,
+			);
+			path = "Gastos Fixos";
+			sourceTree = "<group>";
+		};
+		65479CD3284A810200E9CF13 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				656B2730284AA86A00183912 /* GastosFixosHeader.xib */,
+				656B2732284AA88700183912 /* GastosFixosHeader.swift */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
 		65A4E7622847D2AD00B65279 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,19 +227,10 @@
 		65A4E7632847D2BE00B65279 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				65426AE22842713D006B87E4 /* Main.storyboard */,
-				65A4E7682848048300B65279 /* HomeTableViewHeader.xib */,
+				65479CCF284A800A00E9CF13 /* Home */,
+				65479CD2284A80EA00E9CF13 /* Gastos Fixos */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		65A4E7642847D2C400B65279 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				65426AE02842713D006B87E4 /* ViewController.swift */,
-				65A4E76A284806B100B65279 /* HomeTableViewHeader.swift */,
-			);
-			path = Controller;
 			sourceTree = "<group>";
 		};
 		65A4E7652847D2DA00B65279 /* AppDelegate */ = {
@@ -279,6 +348,9 @@
 			files = (
 				65426AEC2842713F006B87E4 /* LaunchScreen.storyboard in Resources */,
 				65A4E7692848048300B65279 /* HomeTableViewHeader.xib in Resources */,
+				65A4E7712848EFE000B65279 /* GastosFixosTableViewCell.xib in Resources */,
+				65479CDB284A84C900E9CF13 /* GastosFixosViewController.xib in Resources */,
+				656B2731284AA86A00183912 /* GastosFixosHeader.xib in Resources */,
 				65426AE92842713F006B87E4 /* Assets.xcassets in Resources */,
 				65426AE42842713D006B87E4 /* Main.storyboard in Resources */,
 			);
@@ -309,7 +381,11 @@
 				65A4E7672847D3EB00B65279 /* DolarAPI.swift in Sources */,
 				65426ADD2842713D006B87E4 /* AppDelegate.swift in Sources */,
 				65426AE72842713D006B87E4 /* ConsumindoFinancasAPI.xcdatamodeld in Sources */,
+				65A4E7702848EFE000B65279 /* GastosFixosTableViewCell.swift in Sources */,
 				65426ADF2842713D006B87E4 /* SceneDelegate.swift in Sources */,
+				65479CDA284A84C900E9CF13 /* GastosFixosViewController.swift in Sources */,
+				656B2735284E249400183912 /* GastosFixosViewModel.swift in Sources */,
+				656B2733284AA88700183912 /* GastosFixosHeader.swift in Sources */,
 				65A4E76B284806B100B65279 /* HomeTableViewHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

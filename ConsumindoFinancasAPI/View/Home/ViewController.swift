@@ -60,4 +60,11 @@ extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         200
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    
+        
+            navigationController?.pushViewController(GastosFixosViewController(), animated: true)
+            }
+    
 }
