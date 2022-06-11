@@ -17,29 +17,25 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rlw-iW-Qhs" userLabel="HeaderView">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tipo de gasto:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xqr-pI-VvN">
-                            <rect key="frame" x="75" y="29" width="109" height="21"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tipo de gasto:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xqr-pI-VvN">
+                            <rect key="frame" x="60" y="29" width="131" height="28"/>
+                            <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="20"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fR8-0X-bC8">
-                            <rect key="frame" x="199" y="22" width="141" height="34"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fR8-0X-bC8">
+                            <rect key="frame" x="199" y="26" width="155" height="34"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Valor fixo:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BwO-Qe-GWu">
-                            <rect key="frame" x="75" y="71" width="75" height="21"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valor fixo:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BwO-Qe-GWu">
+                            <rect key="frame" x="60" y="71" width="94" height="28"/>
+                            <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="20"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="urm-hB-ISP">
-                            <rect key="frame" x="199" y="64" width="141" height="34"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="urm-hB-ISP">
+                            <rect key="frame" x="199" y="68" width="155" height="34"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
@@ -57,7 +53,17 @@
                     </subviews>
                     <color key="backgroundColor" systemColor="systemMintColor"/>
                     <constraints>
+                        <constraint firstItem="urm-hB-ISP" firstAttribute="leading" secondItem="BwO-Qe-GWu" secondAttribute="trailing" constant="45" id="5qY-x1-Mp2"/>
+                        <constraint firstItem="BwO-Qe-GWu" firstAttribute="top" secondItem="Xqr-pI-VvN" secondAttribute="bottom" constant="14" id="60z-oY-cWT"/>
+                        <constraint firstItem="Xqr-pI-VvN" firstAttribute="leading" secondItem="rlw-iW-Qhs" secondAttribute="leading" constant="60" id="CcY-AW-O2Y"/>
+                        <constraint firstItem="fR8-0X-bC8" firstAttribute="centerY" secondItem="Xqr-pI-VvN" secondAttribute="centerY" id="Dpt-TT-pCD"/>
                         <constraint firstAttribute="height" constant="150" id="H5Z-ZK-oEr"/>
+                        <constraint firstAttribute="trailing" secondItem="fR8-0X-bC8" secondAttribute="trailing" constant="60" id="IE1-FU-GiO"/>
+                        <constraint firstItem="Xqr-pI-VvN" firstAttribute="top" secondItem="rlw-iW-Qhs" secondAttribute="top" constant="29" id="QC6-zt-4IG"/>
+                        <constraint firstAttribute="trailing" secondItem="urm-hB-ISP" secondAttribute="trailing" constant="60" id="S7z-Zf-tGf"/>
+                        <constraint firstItem="fR8-0X-bC8" firstAttribute="leading" secondItem="Xqr-pI-VvN" secondAttribute="trailing" constant="8" symbolic="YES" id="nJY-9M-piK"/>
+                        <constraint firstItem="urm-hB-ISP" firstAttribute="centerY" secondItem="BwO-Qe-GWu" secondAttribute="centerY" id="sOB-NQ-IAG"/>
+                        <constraint firstItem="BwO-Qe-GWu" firstAttribute="leading" secondItem="rlw-iW-Qhs" secondAttribute="leading" constant="60" id="xqm-uE-eaX"/>
                     </constraints>
                 </view>
             </subviews>

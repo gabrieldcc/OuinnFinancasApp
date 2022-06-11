@@ -1,13 +1,38 @@
-import Foundation
+//import Foundation
+//
+//
+//struct GastosFixosData{
+//    
+//    var gastosFixosArray: [GastosFixos] = []
+//    var gabriel = "Gabriel"
+//}
+//
+//struct GastosFixos {
+//    var tipoDeGasto: String
+//    var valorGasto: String
+//}
+//
+//struct ViewController{
+//
+//    var financiamento: GastosFixos = GastosFixos(tipoDeGasto: "financiamento", valorGasto: "2000")
+//    var educacao: GastosFixos = GastosFixos(tipoDeGasto: "educacao", valorGasto: "500")
+//
+//
+//    func adicionaObjeto() {
+//    GastosFixosData().gastosFixosArray.append(financiamento)
+//    GastosFixosData().gastosFixosArray.append(educacao)
+//    GastosFixosData().gastosFixosArray.count
+//    }
+//    
+//}
+//
+//
 
-let dolar = "4.8005"
 
-let dolarA = ("%.2f", dolar)
-
-func formatResult(result: String) -> String{
-    let resultDouble = Double(result)
-    return String(format: "%.2f", resultDouble!)
-    }
+    
 
 
-print(formatResult(result: "4.8006546545"))
+
+
+
+

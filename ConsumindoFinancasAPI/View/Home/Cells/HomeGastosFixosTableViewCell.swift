@@ -7,7 +7,7 @@
 
 import UIKit
 
-class GastosFixosTableViewCell: UITableViewCell {
+class HomeGastosFixosTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()

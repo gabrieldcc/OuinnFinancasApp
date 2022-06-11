@@ -18,7 +18,7 @@ class ViewController: UIViewController {
 
             self.homeTableView.dataSource = self
             self.homeTableView.delegate = self
-            self.homeTableView.register(UINib(nibName: "GastosFixosTableViewCell", bundle: nil), forCellReuseIdentifier: "GastosFixosTableViewCell")
+            self.homeTableView.register(UINib(nibName: "HomeGastosFixosTableViewCell", bundle: nil), forCellReuseIdentifier: "HomeGastosFixosTableViewCell")
         }
 
 }
@@ -32,8 +32,8 @@ extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-       guard let cellGastosFixos = tableView.dequeueReusableCell(withIdentifier: "GastosFixosTableViewCell") as? GastosFixosTableViewCell else {
-            fatalError("error to create GastosFixosTableViewCell")
+       guard let cellGastosFixos = tableView.dequeueReusableCell(withIdentifier: "HomeGastosFixosTableViewCell") as? HomeGastosFixosTableViewCell else {
+            fatalError("error to create HomeGastosFixosTableViewCell")
            
            
         }
