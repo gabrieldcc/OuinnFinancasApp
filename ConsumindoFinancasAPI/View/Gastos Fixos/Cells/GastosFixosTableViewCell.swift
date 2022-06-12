@@ -8,8 +8,8 @@
 import UIKit
 
 class GastosFixosTableViewCell: UITableViewCell {
-
-
+    
+    
     @IBOutlet weak var valorFixoLabel: UILabel!
     
     

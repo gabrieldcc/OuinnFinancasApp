@@ -1,35 +1,37 @@
-//import Foundation
-//
-//
-//struct GastosFixosData{
-//    
-//    var gastosFixosArray: [GastosFixos] = []
-//    var gabriel = "Gabriel"
-//}
-//
-//struct GastosFixos {
-//    var tipoDeGasto: String
-//    var valorGasto: String
-//}
-//
-//struct ViewController{
-//
-//    var financiamento: GastosFixos = GastosFixos(tipoDeGasto: "financiamento", valorGasto: "2000")
-//    var educacao: GastosFixos = GastosFixos(tipoDeGasto: "educacao", valorGasto: "500")
-//
-//
-//    func adicionaObjeto() {
-//    GastosFixosData().gastosFixosArray.append(financiamento)
-//    GastosFixosData().gastosFixosArray.append(educacao)
-//    GastosFixosData().gastosFixosArray.count
-//    }
-//    
-//}
-//
-//
 
 
-    
+
+struct GastosFixosPG {
+    var tipoDeGasto: String
+    var valorGasto: Double
+}
+    var gastosFixosArray: [GastosFixosPG] = []
+    var gastoFixo1 = GastosFixosPG(tipoDeGasto: "aluguel", valorGasto: 1200)
+    var gastoFixo2 = GastosFixosPG(tipoDeGasto: "financiamento", valorGasto: 1500)
+    var gastoFixo3 = GastosFixosPG(tipoDeGasto: "educacao", valorGasto: 600)
+
+
+    gastosFixosArray.append(gastoFixo1)
+    gastosFixosArray.append(gastoFixo2)
+    gastosFixosArray.append(gastoFixo3)
+    gastosFixosArray.count
+
+
+
+func somaValorGasto() -> Double {
+    var total = 0.0
+    for valor in gastosFixosArray {
+        total += valor.valorGasto
+    }
+    return total
+}
+
+somaValorGasto()
+
+
+
+
+
 
 
 

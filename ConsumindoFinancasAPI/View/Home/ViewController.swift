@@ -34,9 +34,9 @@ extension ViewController: UITableViewDataSource {
         
        guard let cellGastosFixos = tableView.dequeueReusableCell(withIdentifier: "HomeGastosFixosTableViewCell") as? HomeGastosFixosTableViewCell else {
             fatalError("error to create HomeGastosFixosTableViewCell")
-           
-           
         }
+        
+        cellGastosFixos.valorTotalLabel.text = "\(GastosFixosViewController().somaGastosFixos())"
             return cellGastosFixos
     }
     

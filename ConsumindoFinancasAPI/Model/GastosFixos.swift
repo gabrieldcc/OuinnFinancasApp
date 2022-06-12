@@ -8,17 +8,19 @@
 import UIKit
 
 
-class GastosFixos: NSObject {
+class GastosFixos {
         
     var tipoDeGastoFixo: String
-    var valorGastoFixo: String
+    var valorGastoFixo: Double
 
-    init(tipoDeGastoFixo: String, valorGastoFixo: String) {
+    init(tipoDeGastoFixo: String, valorGastoFixo: Double) {
         self.tipoDeGastoFixo = tipoDeGastoFixo
         self.valorGastoFixo = valorGastoFixo
-    
+        
+    }
+        
     }
     
-}
+
 
 

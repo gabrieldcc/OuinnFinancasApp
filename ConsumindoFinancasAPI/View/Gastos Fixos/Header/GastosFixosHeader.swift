@@ -11,23 +11,25 @@ import UIKit
 
 class GastosFixosHeader: UIView {
     
-    var vc: GastosFixosViewController?
+    var viewController: GastosFixosViewController?
     
     //MARK: IBOutlets
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var tipoDeGastoTextField: UITextField!
     @IBOutlet weak var valorFixoTextField: UITextField!
-
+    
     //MARK: IBAction
     @IBAction func addButton(_ sender: Any) {
-        let gastosFixosObject = GastosFixos(tipoDeGastoFixo: tipoDeGastoTextField.text!, valorGastoFixo: valorFixoTextField.text!)
+        guard let tipoDeGasto = tipoDeGastoTextField.text, let valorGasto = valorFixoTextField.text, let valorGastoDouble = Double(valorGasto) else {return}
         
-        vc?.gastosFixos.append(gastosFixosObject)
+        let gastosFixosObject = GastosFixos(tipoDeGastoFixo: tipoDeGasto, valorGastoFixo: valorGastoDouble)
+        
+        viewController?.gastosFixosArray.append(gastosFixosObject)
         limpaTextField()
-        vc?.tableView?.reloadData()
+        viewController?.tableView?.reloadData()
     }
     
-
+    
     
     //MARK: Metodos
     func configuraHeader() {
