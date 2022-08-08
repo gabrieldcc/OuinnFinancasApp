@@ -1,0 +1,6 @@
+framework module Pods_ConsumindoFinancasAPITests {
+  umbrella header "Pods-ConsumindoFinancasAPITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

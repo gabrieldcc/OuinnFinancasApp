@@ -1,0 +1,6 @@
+framework module Pods_ConsumindoFinancasAPI {
+  umbrella header "Pods-ConsumindoFinancasAPI-umbrella.h"
+
+  export *
+  module * { export * }
+}
