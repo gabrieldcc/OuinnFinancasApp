@@ -7,44 +7,37 @@
 
 import UIKit
 
-final class HomeViewController: UIViewController {
+final class HomeViewController: UIViewController, GastosFixosViewControllerDelegate {
     
     //MARK: - Vars
-    var gastosFixosVC: GastosFixosViewController?
+    var gastosFixosVC = GastosFixosViewController()
     var gastosFixos: Double = 0.0
-    var homeGastosFixosTableViewCell: HomeGastosFixosTableViewCell?
-    var homeGastosFixosCell = HomeGastosFixosTableViewCell()
     
-    //MARK: IBOutlets
+    //MARK: - IBOutlets
     @IBOutlet weak var homeTableView: UITableView!
     
-    //MARK: Life Cycle View
+    //MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-        setupTotal()
+        self.gastosFixosVC.delegate = self
     }
     
     //MARK: - Funcs
-    
     func setupTableView() {
         self.homeTableView.dataSource = self
         self.homeTableView.delegate = self
         self.homeTableView.register(UINib(nibName: "HomeGastosFixosTableViewCell", bundle: nil), forCellReuseIdentifier: "HomeGastosFixosTableViewCell")
     }
     
-    func soma(_ total: Double) {
-        gastosFixos = total
-        self.homeTableView.reloadData()
-    }
-    
-    func setupTotal() {
-        gastosFixosVC?.sumGastosFixos(totalD: gastosFixos)
+    func totalGastosFixos(total: Double) {
+        self.gastosFixos = total
+        homeTableView.reloadData()
     }
     
 }
 
-
+    //MARK: - Tableview
 extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
@@ -56,7 +49,7 @@ extension HomeViewController: UITableViewDataSource {
             fatalError("error to create HomeGastosFixosTableViewCell")
         }
         
-        cellGastosFixos.valorTotalLabel.text = "\(gastosFixos)"
+        cellGastosFixos.valorTotalLabel.text = "\(self.gastosFixos)"
         return cellGastosFixos
     }
     
@@ -70,8 +63,9 @@ extension HomeViewController: UITableViewDataSource {
 extension HomeViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let header = Bundle.main.loadNibNamed("HomeTableViewHeader", owner: self, options: nil)?.first as? HomeTableViewHeader
-        header?.configuraViewHeader()
+        guard let header = Bundle.main.loadNibNamed("HomeTableViewHeader", owner: self, options: nil)?.first as? HomeTableViewHeader else { return UIView() }
+        
+        header.configuraViewHeader()
         
         return header
     }
@@ -81,8 +75,7 @@ extension HomeViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        navigationController?.pushViewController(GastosFixosViewController(), animated: true)
+        navigationController?.pushViewController(gastosFixosVC, animated: true)
     }
     
 }

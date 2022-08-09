@@ -7,12 +7,17 @@
 
 import UIKit
 
+protocol GastosFixosViewControllerDelegate: AnyObject {
+    func totalGastosFixos(total: Double)
+}
+
 final class GastosFixosViewController: UIViewController {
     
     //MARK: Vars
     var alerta = Alerta()
     var gastosFixosArray: [GastosFixos] = []
     var totalGastosFixos: Double?
+    weak var delegate: GastosFixosViewControllerDelegate?
     
     //MARK: IBOutlets
     @IBOutlet weak var tableView: UITableView!
@@ -25,17 +30,18 @@ final class GastosFixosViewController: UIViewController {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        //sumGastosFixos()
+        super.viewWillDisappear(animated)
+        delegate?.totalGastosFixos(total: sumGastosFixos())
     }
     
     //MARK: - Funcs
     
-    func sumGastosFixos(totalD: Double)   {
+    func sumGastosFixos() -> Double  {
         var total = 0.0
         for valor in gastosFixosArray {
             total += valor.valorGastoFixo
         }
-        total = totalD
+        return total
     }
     
     func setupTableView() {
