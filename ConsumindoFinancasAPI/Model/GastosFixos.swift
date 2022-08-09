@@ -10,7 +10,7 @@ import UIKit
 
 class GastosFixos: NSObject, NSCoding {
     
-    //MARK: Atributos
+    //MARK: - Vars
     var tipoDeGastoFixo: String
     var valorGastoFixo: Double
 

@@ -9,13 +9,7 @@ import UIKit
 
 class Alerta {
     
-    let controller: UIViewController
-    
-    init(controller: UIViewController) {
-        self.controller = controller
-    }
-    
-    func exibe(title: String = "Atenção", message: String, handler: @escaping (UIAlertAction) -> Void) {
+    func show(controller: UIViewController, title: String = "Atenção", message: String, handler: @escaping (UIAlertAction) -> Void) {
         
         let alerta = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let buttonOk = UIAlertAction(title: "Cancelar", style: .cancel, handler: nil)

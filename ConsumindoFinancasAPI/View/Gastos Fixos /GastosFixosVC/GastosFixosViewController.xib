@@ -19,14 +19,19 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="GastosFixosViewController" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="G9A-yc-dEG">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="GastosFixosViewController" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="G9A-yc-dEG">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemMintColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="G9A-yc-dEG" secondAttribute="bottom" id="IdT-AC-ewz"/>
+                <constraint firstItem="G9A-yc-dEG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="PKv-PL-nCk"/>
+                <constraint firstItem="G9A-yc-dEG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="rqW-88-hnh"/>
+                <constraint firstItem="G9A-yc-dEG" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="ziB-k2-Uoj"/>
+            </constraints>
             <point key="canvasLocation" x="131.8840579710145" y="88.392857142857139"/>
         </view>
     </objects>

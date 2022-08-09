@@ -7,87 +7,76 @@
 
 import UIKit
 
-protocol GastosFixosDelegate: AnyObject {
-    func soma(_ total: Double)
-}
-
 final class GastosFixosViewController: UIViewController {
     
-    //MARK: Atributos
+    //MARK: Vars
+    var alerta = Alerta()
     var gastosFixosArray: [GastosFixos] = []
-    weak var gastosFixosDelegate: GastosFixosDelegate?
-    weak var gastosFixosDaoDelegate: GastosFixosDao?
-    
+    var totalGastosFixos: Double?
     
     //MARK: IBOutlets
     @IBOutlet weak var tableView: UITableView!
     
-    
-    //MARK: View Life Cycle
+    //MARK: View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        tableView.delegate = self
-        tableView.dataSource = self
-        self.tableView.register(UINib(nibName: "GastosFixosTableViewCell", bundle: nil), forCellReuseIdentifier: "GastosFixosTableViewCell")
-        
-        self.saveData()
-      
-        
-        somaGastosFixos()
-        
-        print("quantidade de gastos fixos: \(gastosFixosArray.count)")
+        setupTableView()
+        saveData()
     }
-    
-    func saveData() {
-    guard let diretorio = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {return}
-    let caminho = diretorio.appendingPathComponent("GastoFixo")
-    print(caminho)
-    do {
-        let dados = try Data(contentsOf: caminho)
-        guard let gastosFixosSalvos = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(dados) as? [GastosFixos] else {return}
-        gastosFixosArray = gastosFixosSalvos
-        try dados.write(to: caminho)
-    } catch {
-        print(error.localizedDescription)
-    }
-}
     
     override func viewWillDisappear(_ animated: Bool) {
-        somaGastosFixos()
+        //sumGastosFixos()
     }
     
+    //MARK: - Funcs
     
-    //MARK: Métodos
-    func somaGastosFixos() {
+    func sumGastosFixos(totalD: Double)   {
         var total = 0.0
         for valor in gastosFixosArray {
             total += valor.valorGastoFixo
         }
-        gastosFixosDelegate?.soma(total)
+        total = totalD
     }
+    
+    func setupTableView() {
+        tableView.delegate = self
+        tableView.dataSource = self
+        self.tableView.register(UINib(nibName: "GastosFixosTableViewCell", bundle: nil), forCellReuseIdentifier: "GastosFixosTableViewCell")
+    }
+    
+    func saveData() {
+        guard let diretorio = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {return}
+        let caminho = diretorio.appendingPathComponent("GastoFixo")
+        do {
+            let dados = try Data(contentsOf: caminho)
+            guard let gastosFixosSalvos = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(dados) as? [GastosFixos] else {return}
+            gastosFixosArray = gastosFixosSalvos
+            try dados.write(to: caminho)
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
+    
 }
 
 
-
-//MARK: Extension UITableViewDelegate
+//MARK: - Tableview
 extension GastosFixosViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = Bundle.main.loadNibNamed("GastosFixosHeader", owner: self, options: nil)?.first as? GastosFixosHeader
         header?.configuraHeader()
-        header?.viewController = self
+        header?.gastosFixosVC = self
+        //header?.totalLabel.text = "\(sumGastosFixos())"
         return header
     }
     
-    
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        150
+        return 241
     }
 }
 
 
-//MARK: Extension UITableViewDataSource
 extension GastosFixosViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -99,26 +88,24 @@ extension GastosFixosViewController: UITableViewDataSource {
         cellGastosFixos.tipoGastoLabel.text = data.tipoDeGastoFixo
         cellGastosFixos.valorFixoLabel.text = "\(data.valorGastoFixo)"
         
-        let longPress = UILongPressGestureRecognizer(target: self, action: #selector(mostrarAlerta(_:)))
+        let longPress = UILongPressGestureRecognizer(target: self, action: #selector(showAlert(_:)))
         cellGastosFixos.addGestureRecognizer(longPress)
         
         return cellGastosFixos
     }
     
-    
-    
-    @objc func mostrarAlerta(_ gesture: UILongPressGestureRecognizer) {
-        if gesture.state == .began {
+    @objc func showAlert(_ gesture: UILongPressGestureRecognizer) {
+        let gestureBegan = gesture.state == .began
+        let celula = gesture.view as! UITableViewCell
+        guard let indexPath = tableView.indexPath(for: celula) else { return }
+        let gastoFixo = gastosFixosArray[indexPath.row]
+        
+        if  gestureBegan {
             
-            let celula = gesture.view as! UITableViewCell
-            guard let indexPath = tableView.indexPath(for: celula) else {return}
-            let gastoFixo = gastosFixosArray[indexPath.row]
-            
-            Alerta(controller: self).exibe(title: "Deletar", message: "Você realmente deseja deletar \(gastoFixo.tipoDeGastoFixo)?", handler: { alerta in
+            alerta.show(controller: self, title: "Deletar", message: "Você realmente deseja deletar \(gastoFixo.tipoDeGastoFixo)?", handler: { alerta in
                 self.gastosFixosArray.remove(at: indexPath.row)
                 self.tableView.reloadData()
             })
-            
         }
     }
     

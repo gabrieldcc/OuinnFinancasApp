@@ -7,35 +7,47 @@
 
 import UIKit
 
-final class ViewController: UIViewController {
+final class HomeViewController: UIViewController {
+    
+    //MARK: - Vars
+    var gastosFixosVC: GastosFixosViewController?
+    var gastosFixos: Double = 0.0
+    var homeGastosFixosTableViewCell: HomeGastosFixosTableViewCell?
+    var homeGastosFixosCell = HomeGastosFixosTableViewCell()
     
     //MARK: IBOutlets
     @IBOutlet weak var homeTableView: UITableView!
     
-    //MARK: Vars
-    var gastosFixosViewController: GastosFixosViewController?
-    var gastosFixos: Double = 0.0
-    var homeGastosFixosTableViewCell: HomeGastosFixosTableViewCell?
-    
-    
     //MARK: Life Cycle View
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setupTableView()
+        setupTotal()
+    }
+    
+    //MARK: - Funcs
+    
+    func setupTableView() {
         self.homeTableView.dataSource = self
         self.homeTableView.delegate = self
         self.homeTableView.register(UINib(nibName: "HomeGastosFixosTableViewCell", bundle: nil), forCellReuseIdentifier: "HomeGastosFixosTableViewCell")
-        
-        gastosFixosViewController?.gastosFixosDelegate = self
-        
+    }
+    
+    func soma(_ total: Double) {
+        gastosFixos = total
+        self.homeTableView.reloadData()
+    }
+    
+    func setupTotal() {
+        gastosFixosVC?.sumGastosFixos(totalD: gastosFixos)
     }
     
 }
 
 
-extension ViewController: UITableViewDataSource {
+extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        1
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -44,17 +56,18 @@ extension ViewController: UITableViewDataSource {
             fatalError("error to create HomeGastosFixosTableViewCell")
         }
         
-        cellGastosFixos.valorTotalLabel.text = String(describing: gastosFixos)
+        cellGastosFixos.valorTotalLabel.text = "\(gastosFixos)"
         return cellGastosFixos
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        200
+        return 200
     }
+    
 }
 
 
-extension ViewController: UITableViewDelegate {
+extension HomeViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = Bundle.main.loadNibNamed("HomeTableViewHeader", owner: self, options: nil)?.first as? HomeTableViewHeader
@@ -64,7 +77,7 @@ extension ViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        200
+        return 200
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -74,11 +87,7 @@ extension ViewController: UITableViewDelegate {
     
 }
 
-extension ViewController: GastosFixosDelegate {
-    func soma(_ total: Double) {
-        gastosFixos = total
-        self.homeTableView.reloadData()
-    }
+   
     
     
-}
+

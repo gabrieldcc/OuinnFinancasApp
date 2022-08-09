@@ -24,7 +24,7 @@ class DolarAPI {
             
             print("error: \(String(describing: error))")
             
-            guard let responseData = data else {return}
+            guard let responseData = data else { return }
             do {
                 let objetoDecodificado = try JSONDecoder().decode(apiDolar.self, from: responseData)
                 completion(objetoDecodificado)
