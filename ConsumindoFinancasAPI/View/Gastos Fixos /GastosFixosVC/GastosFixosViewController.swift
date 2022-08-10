@@ -13,11 +13,13 @@ protocol GastosFixosViewControllerDelegate: AnyObject {
 
 final class GastosFixosViewController: UIViewController {
     
+    
     //MARK: Vars
     var alerta = Alerta()
     var gastosFixosArray: [GastosFixos] = []
     var totalGastosFixos: Double?
     weak var delegate: GastosFixosViewControllerDelegate?
+    var gastosFixosDao = GastosFixosDao()
     
     //MARK: IBOutlets
     @IBOutlet weak var tableView: UITableView!
@@ -26,7 +28,7 @@ final class GastosFixosViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-        saveData()
+        gastosFixosArray = gastosFixosDao.recoverData()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -50,18 +52,9 @@ final class GastosFixosViewController: UIViewController {
         self.tableView.register(UINib(nibName: "GastosFixosTableViewCell", bundle: nil), forCellReuseIdentifier: "GastosFixosTableViewCell")
     }
     
-    func saveData() {
-        guard let diretorio = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {return}
-        let caminho = diretorio.appendingPathComponent("GastoFixo")
-        do {
-            let dados = try Data(contentsOf: caminho)
-            guard let gastosFixosSalvos = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(dados) as? [GastosFixos] else {return}
-            gastosFixosArray = gastosFixosSalvos
-            try dados.write(to: caminho)
-        } catch {
-            print(error.localizedDescription)
-        }
-    }
+    
+    
+    
     
 }
 

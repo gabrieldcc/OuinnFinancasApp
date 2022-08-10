@@ -26,6 +26,7 @@
 		656B2733284AA88700183912 /* GastosFixosHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656B2732284AA88700183912 /* GastosFixosHeader.swift */; };
 		656B2735284E249400183912 /* GastosFixosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656B2734284E249400183912 /* GastosFixosViewModel.swift */; };
 		656B2739284E323E00183912 /* GastosFixos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656B2738284E323E00183912 /* GastosFixos.swift */; };
+		656DF56828A3F5370056F94B /* GastosFixosDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656DF56728A3F5370056F94B /* GastosFixosDao.swift */; };
 		65A3258B2854FEF400A51086 /* GastosFixosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A325892854FEF400A51086 /* GastosFixosTableViewCell.swift */; };
 		65A3258C2854FEF500A51086 /* GastosFixosTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65A3258A2854FEF400A51086 /* GastosFixosTableViewCell.xib */; };
 		65A3258F2857934500A51086 /* Alerta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A3258E2857934500A51086 /* Alerta.swift */; };
@@ -82,6 +83,7 @@
 		656B2732284AA88700183912 /* GastosFixosHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GastosFixosHeader.swift; sourceTree = "<group>"; };
 		656B2734284E249400183912 /* GastosFixosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GastosFixosViewModel.swift; sourceTree = "<group>"; };
 		656B2738284E323E00183912 /* GastosFixos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GastosFixos.swift; sourceTree = "<group>"; };
+		656DF56728A3F5370056F94B /* GastosFixosDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GastosFixosDao.swift; sourceTree = "<group>"; };
 		65A325892854FEF400A51086 /* GastosFixosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GastosFixosTableViewCell.swift; sourceTree = "<group>"; };
 		65A3258A2854FEF400A51086 /* GastosFixosTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GastosFixosTableViewCell.xib; sourceTree = "<group>"; };
 		65A3258E2857934500A51086 /* Alerta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerta.swift; sourceTree = "<group>"; };
@@ -175,9 +177,9 @@
 		65426ADB2842713D006B87E4 /* ConsumindoFinancasAPI */ = {
 			isa = PBXGroup;
 			children = (
+				656DF56628A3F5200056F94B /* LaunchScreen */,
+				656DF56528A3F5110056F94B /* Resources */,
 				6526D30128649D560044DFD7 /* Extensions */,
-				65426AE82842713F006B87E4 /* Assets.xcassets */,
-				65426AEA2842713F006B87E4 /* LaunchScreen.storyboard */,
 				65A4E7652847D2DA00B65279 /* AppDelegate */,
 				65A4E7622847D2AD00B65279 /* Model */,
 				65A4E7632847D2BE00B65279 /* View */,
@@ -287,6 +289,22 @@
 			path = HomeVC;
 			sourceTree = "<group>";
 		};
+		656DF56528A3F5110056F94B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				65426AE82842713F006B87E4 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		656DF56628A3F5200056F94B /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				65426AEA2842713F006B87E4 /* LaunchScreen.storyboard */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
 		65A325882854FE3000A51086 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -302,6 +320,7 @@
 				652D1B2328A1A6F0004ECC05 /* Networking */,
 				656B2738284E323E00183912 /* GastosFixos.swift */,
 				65A3258E2857934500A51086 /* Alerta.swift */,
+				656DF56728A3F5370056F94B /* GastosFixosDao.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -583,6 +602,7 @@
 			files = (
 				65426AE12842713D006B87E4 /* HomeViewControllerViewController.swift in Sources */,
 				65A4E7672847D3EB00B65279 /* DolarAPI.swift in Sources */,
+				656DF56828A3F5370056F94B /* GastosFixosDao.swift in Sources */,
 				65A3258F2857934500A51086 /* Alerta.swift in Sources */,
 				65426ADD2842713D006B87E4 /* AppDelegate.swift in Sources */,
 				65A3258B2854FEF400A51086 /* GastosFixosTableViewCell.swift in Sources */,

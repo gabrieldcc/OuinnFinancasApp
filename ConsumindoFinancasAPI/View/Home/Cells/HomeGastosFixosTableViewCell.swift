@@ -10,15 +10,23 @@ import UIKit
 
 final class HomeGastosFixosTableViewCell: UITableViewCell {
 
+    //MARK: - Vars
     var gastosFixosVC = GastosFixosViewController()
 
-    //MARK: IBOulets
+
+    //MARK: - IBOulets
     @IBOutlet weak var valorTotalLabel: UILabel!
     
+   
     
+    //MARK: - Funcs
     func setupCell(total: Double) {
         valorTotalLabel.text = "\(total)"
+        
     }
+    
+   
+   
     
 }
 
