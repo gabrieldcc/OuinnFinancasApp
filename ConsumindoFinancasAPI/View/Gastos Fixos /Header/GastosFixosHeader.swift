@@ -7,8 +7,6 @@
 
 import UIKit
 
-
-
 final class GastosFixosHeader: UIView {
     
     //MARK: - Vars
@@ -19,21 +17,24 @@ final class GastosFixosHeader: UIView {
     @IBOutlet weak var tipoDeGastoTextField: UITextField!
     @IBOutlet weak var valorFixoTextField: UITextField!
     @IBOutlet weak var totalLabel: UILabel!
+    @IBOutlet weak var infoBarBackgroundView: UIView!
     
     //MARK: - IBAction
     @IBAction func addButton(_ sender: Any) {
         addGastosFixosInGastosFixosVcArray()
-        limpaTextField()
+        cleanUpTextField()
         gastosFixosVC?.tableView?.reloadData()
     }
 
     //MARK: - Funcs
-    func configuraHeader() {
-        headerView.layer.cornerRadius = 10
+    func setupHeader() {
+        headerView.layer.cornerRadius = 20
         headerView.layer.masksToBounds = true
+        infoBarBackgroundView.layer.cornerRadius = 10
+        infoBarBackgroundView.layer.masksToBounds = true
     }
     
-    func limpaTextField() {
+    func cleanUpTextField() {
         tipoDeGastoTextField.text = ""
         valorFixoTextField.text = ""
     }
@@ -46,16 +47,4 @@ final class GastosFixosHeader: UIView {
     }
     
 }
-
-    // to do
-//guard let diretorio = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {return}
-//let caminho = diretorio.appendingPathComponent("GastoFixo")
-//print(caminho)
-//
-//do {
-//    let dados = try NSKeyedArchiver.archivedData(withRootObject: viewController?.gastosFixosArray, requiringSecureCoding: false)
-//    try dados.write(to: caminho)
-//} catch {
-//    print(error.localizedDescription)
-//}
 

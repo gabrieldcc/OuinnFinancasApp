@@ -63,15 +63,17 @@ final class GastosFixosViewController: UIViewController {
 extension GastosFixosViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let header = Bundle.main.loadNibNamed("GastosFixosHeader", owner: self, options: nil)?.first as? GastosFixosHeader
-        header?.configuraHeader()
-        header?.gastosFixosVC = self
-        //header?.totalLabel.text = "\(sumGastosFixos())"
-        return header
+        guard let header = Bundle.main.loadNibNamed("GastosFixosHeader", owner: self, options: nil)?.first as? GastosFixosHeader else { return nil }
+        
+            header.setupHeader()
+            header.gastosFixosVC = self
+            header.totalLabel.text = "R$ \(sumGastosFixos())"
+            
+            return header
     }
-    
+
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 241
+        return 192
     }
 }
 

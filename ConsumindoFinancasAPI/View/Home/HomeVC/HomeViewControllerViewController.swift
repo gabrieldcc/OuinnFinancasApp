@@ -20,7 +20,7 @@ final class HomeViewController: UIViewController, GastosFixosViewControllerDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-        self.gastosFixosVC.delegate = self
+        gastosFixosVC.delegate = self
     }
     
     //MARK: - Funcs
@@ -75,6 +75,7 @@ extension HomeViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        indexPath.row
         navigationController?.pushViewController(gastosFixosVC, animated: true)
     }
     
