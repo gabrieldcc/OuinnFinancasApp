@@ -37,6 +37,8 @@
 		656DF58328A5C1AE0056F94B /* LabelDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656DF58228A5C1AE0056F94B /* LabelDefault.swift */; };
 		656DF58528A5C6300056F94B /* TextFieldDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656DF58428A5C6300056F94B /* TextFieldDefault.swift */; };
 		656DF58728A5CAD70056F94B /* ButtonDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656DF58628A5CAD70056F94B /* ButtonDefault.swift */; };
+		656DF58928A696BC0056F94B /* ViewControllerDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656DF58828A696BC0056F94B /* ViewControllerDefault.swift */; };
+		656DF58C28A6B9A50056F94B /* RegisterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656DF58B28A6B9A50056F94B /* RegisterCoordinator.swift */; };
 		65A3258B2854FEF400A51086 /* GastosFixosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A325892854FEF400A51086 /* GastosFixosTableViewCell.swift */; };
 		65A3258C2854FEF500A51086 /* GastosFixosTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65A3258A2854FEF400A51086 /* GastosFixosTableViewCell.xib */; };
 		65A3258F2857934500A51086 /* Alerta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A3258E2857934500A51086 /* Alerta.swift */; };
@@ -104,6 +106,8 @@
 		656DF58228A5C1AE0056F94B /* LabelDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelDefault.swift; sourceTree = "<group>"; };
 		656DF58428A5C6300056F94B /* TextFieldDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldDefault.swift; sourceTree = "<group>"; };
 		656DF58628A5CAD70056F94B /* ButtonDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonDefault.swift; sourceTree = "<group>"; };
+		656DF58828A696BC0056F94B /* ViewControllerDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerDefault.swift; sourceTree = "<group>"; };
+		656DF58B28A6B9A50056F94B /* RegisterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCoordinator.swift; sourceTree = "<group>"; };
 		65A325892854FEF400A51086 /* GastosFixosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GastosFixosTableViewCell.swift; sourceTree = "<group>"; };
 		65A3258A2854FEF400A51086 /* GastosFixosTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GastosFixosTableViewCell.xib; sourceTree = "<group>"; };
 		65A3258E2857934500A51086 /* Alerta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerta.swift; sourceTree = "<group>"; };
@@ -206,6 +210,7 @@
 				65A4E7622847D2AD00B65279 /* Model */,
 				65A4E7632847D2BE00B65279 /* View */,
 				65479CAD2849678400E9CF13 /* ViewModel */,
+				656DF58A28A6B9760056F94B /* Coordinator */,
 				65479CAE2849679800E9CF13 /* Mock */,
 				65426AED2842713F006B87E4 /* Info.plist */,
 				65426B0F28427F7B006B87E4 /* MyPlayground.playground */,
@@ -386,8 +391,17 @@
 				656DF58228A5C1AE0056F94B /* LabelDefault.swift */,
 				656DF58428A5C6300056F94B /* TextFieldDefault.swift */,
 				656DF58628A5CAD70056F94B /* ButtonDefault.swift */,
+				656DF58828A696BC0056F94B /* ViewControllerDefault.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		656DF58A28A6B9760056F94B /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				656DF58B28A6B9A50056F94B /* RegisterCoordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		65A325882854FE3000A51086 /* Cells */ = {
@@ -702,10 +716,12 @@
 				65A4E7702848EFE000B65279 /* HomeGastosFixosTableViewCell.swift in Sources */,
 				65426ADF2842713D006B87E4 /* SceneDelegate.swift in Sources */,
 				6526D2BF28638F450044DFD7 /* NSUIColor+Hex.swift in Sources */,
+				656DF58C28A6B9A50056F94B /* RegisterCoordinator.swift in Sources */,
 				656DF58328A5C1AE0056F94B /* LabelDefault.swift in Sources */,
 				656DF57928A5434C0056F94B /* Validator.swift in Sources */,
 				656DF57228A453010056F94B /* LoginView.swift in Sources */,
 				656B2739284E323E00183912 /* GastosFixos.swift in Sources */,
+				656DF58928A696BC0056F94B /* ViewControllerDefault.swift in Sources */,
 				65479CDA284A84C900E9CF13 /* GastosFixosViewController.swift in Sources */,
 				656DF56E28A44FCC0056F94B /* InvestimentosTableViewCell.swift in Sources */,
 				656B2735284E249400183912 /* GastosFixosViewModel.swift in Sources */,

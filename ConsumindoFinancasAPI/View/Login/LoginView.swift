@@ -26,7 +26,7 @@ final class LoginView: UIView {
     lazy private var passwordLabel = UILabelDefault(text: "Senha", font: 16, weight: .semibold)
     
     lazy private var emailTextField = UITextFieldDefault(placeholder: "Email", keyboardType: .emailAddress)
-    lazy private var passowrdTextField = UITextFieldDefault(placeholder: "Informe sua senha")
+    lazy private var passowrdTextField = UITextFieldDefault(placeholder: "Informe sua senha", isSecure: true)
     
     lazy private var loginButton = UIButtonDefault(title: "Entrar", color: .systemMint, isEnabled: true)
     lazy private var registerButton = UIButtonDefault(title: "Registrar", color: .systemMint)

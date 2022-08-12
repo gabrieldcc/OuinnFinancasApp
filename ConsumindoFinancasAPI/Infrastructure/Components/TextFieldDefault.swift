@@ -13,22 +13,27 @@ class UITextFieldDefault: UITextField {
     let padding = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 0)
 
     //MARK: - Inits
-    init(placeholder: String, keyboardType: UIKeyboardType = .default) {
+    init(placeholder: String, keyboardType: UIKeyboardType = .default, isSecure: Bool = false) {
         super.init(frame: .zero)
-        initDefault(placeholder: placeholder, keyboardType: keyboardType)
+        initDefault(placeholder: placeholder, keyboardType: keyboardType, isSecure: false)
+        
+        initDefault(placeholder: placeholder, keyboardType: keyboardType, isSecure: isSecure)
     }
+    
+    
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
     //MARK: - Funcs
-    private func initDefault(placeholder: String, keyboardType: UIKeyboardType) {
+    private func initDefault(placeholder: String, keyboardType: UIKeyboardType, isSecure: Bool) {
         self.translatesAutoresizingMaskIntoConstraints = false
         self.backgroundColor = .opaqueSeparator
         self.placeholder = placeholder
         self.layer.borderWidth = 0.5
         self.keyboardType = keyboardType
+        self.isSecureTextEntry = isSecure
     }
     
     //MARK: Add padding in textfield
