@@ -34,6 +34,9 @@
 		656DF57628A456430056F94B /* ViewCodeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656DF57528A456430056F94B /* ViewCodeProtocol.swift */; };
 		656DF57928A5434C0056F94B /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656DF57828A5434C0056F94B /* Validator.swift */; };
 		656DF57B28A54F8A0056F94B /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656DF57A28A54F8A0056F94B /* UIView+.swift */; };
+		656DF58328A5C1AE0056F94B /* LabelDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656DF58228A5C1AE0056F94B /* LabelDefault.swift */; };
+		656DF58528A5C6300056F94B /* TextFieldDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656DF58428A5C6300056F94B /* TextFieldDefault.swift */; };
+		656DF58728A5CAD70056F94B /* ButtonDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656DF58628A5CAD70056F94B /* ButtonDefault.swift */; };
 		65A3258B2854FEF400A51086 /* GastosFixosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A325892854FEF400A51086 /* GastosFixosTableViewCell.swift */; };
 		65A3258C2854FEF500A51086 /* GastosFixosTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65A3258A2854FEF400A51086 /* GastosFixosTableViewCell.xib */; };
 		65A3258F2857934500A51086 /* Alerta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A3258E2857934500A51086 /* Alerta.swift */; };
@@ -98,6 +101,9 @@
 		656DF57528A456430056F94B /* ViewCodeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCodeProtocol.swift; sourceTree = "<group>"; };
 		656DF57828A5434C0056F94B /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		656DF57A28A54F8A0056F94B /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		656DF58228A5C1AE0056F94B /* LabelDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelDefault.swift; sourceTree = "<group>"; };
+		656DF58428A5C6300056F94B /* TextFieldDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldDefault.swift; sourceTree = "<group>"; };
+		656DF58628A5CAD70056F94B /* ButtonDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonDefault.swift; sourceTree = "<group>"; };
 		65A325892854FEF400A51086 /* GastosFixosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GastosFixosTableViewCell.swift; sourceTree = "<group>"; };
 		65A3258A2854FEF400A51086 /* GastosFixosTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GastosFixosTableViewCell.xib; sourceTree = "<group>"; };
 		65A3258E2857934500A51086 /* Alerta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerta.swift; sourceTree = "<group>"; };
@@ -196,6 +202,7 @@
 				656DF57728A458010056F94B /* Protocols */,
 				656DF56528A3F5110056F94B /* Resources */,
 				6526D30128649D560044DFD7 /* Extensions */,
+				656DF58028A5C1570056F94B /* Infrastructure */,
 				65A4E7622847D2AD00B65279 /* Model */,
 				65A4E7632847D2BE00B65279 /* View */,
 				65479CAD2849678400E9CF13 /* ViewModel */,
@@ -363,6 +370,24 @@
 				656DF57528A456430056F94B /* ViewCodeProtocol.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		656DF58028A5C1570056F94B /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				656DF58128A5C1710056F94B /* Components */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		656DF58128A5C1710056F94B /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				656DF58228A5C1AE0056F94B /* LabelDefault.swift */,
+				656DF58428A5C6300056F94B /* TextFieldDefault.swift */,
+				656DF58628A5CAD70056F94B /* ButtonDefault.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		65A325882854FE3000A51086 /* Cells */ = {
@@ -667,7 +692,9 @@
 				65426AE12842713D006B87E4 /* HomeViewControllerViewController.swift in Sources */,
 				65A4E7672847D3EB00B65279 /* DolarAPI.swift in Sources */,
 				656DF56828A3F5370056F94B /* GastosFixosDao.swift in Sources */,
+				656DF58528A5C6300056F94B /* TextFieldDefault.swift in Sources */,
 				65A3258F2857934500A51086 /* Alerta.swift in Sources */,
+				656DF58728A5CAD70056F94B /* ButtonDefault.swift in Sources */,
 				65426ADD2842713D006B87E4 /* AppDelegate.swift in Sources */,
 				65A3258B2854FEF400A51086 /* GastosFixosTableViewCell.swift in Sources */,
 				65426AE72842713D006B87E4 /* ConsumindoFinancasAPI.xcdatamodeld in Sources */,
@@ -675,6 +702,7 @@
 				65A4E7702848EFE000B65279 /* HomeGastosFixosTableViewCell.swift in Sources */,
 				65426ADF2842713D006B87E4 /* SceneDelegate.swift in Sources */,
 				6526D2BF28638F450044DFD7 /* NSUIColor+Hex.swift in Sources */,
+				656DF58328A5C1AE0056F94B /* LabelDefault.swift in Sources */,
 				656DF57928A5434C0056F94B /* Validator.swift in Sources */,
 				656DF57228A453010056F94B /* LoginView.swift in Sources */,
 				656B2739284E323E00183912 /* GastosFixos.swift in Sources */,

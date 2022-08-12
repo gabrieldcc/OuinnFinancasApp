@@ -7,70 +7,29 @@
 
 import UIKit
 
+protocol LoginViewDelegate: AnyObject {
+    func targetLoginButtonPresentHomeVC()
+}
+
 final class LoginView: UIView {
     
     //MARK: - Vars
     private var validator = Validator()
-    private var vc = LoginViewController()
+    weak var delegate: LoginViewDelegate?
+    
+    
     
     //MARK: - Visual components
     
-    lazy private var titleLabel: UILabel = {
-        let lb = UILabel()
-        lb.text = "Login"
-        lb.translatesAutoresizingMaskIntoConstraints = false
-        lb.font = UIFont.systemFont(ofSize: 25, weight: .semibold)
-        
-        return lb
-    }()
+    lazy private var titleLabel = UILabelDefault(text: "Login", font: 25, weight: .semibold)
+    lazy private var emailLabel = UILabelDefault(text: "Email", font: 16, weight: .semibold)
+    lazy private var passwordLabel = UILabelDefault(text: "Senha", font: 16, weight: .semibold)
     
-    lazy private var emailLabel: UILabel = {
-        let lb = UILabel()
-        lb.text = "Email"
-        lb.translatesAutoresizingMaskIntoConstraints = false
-        
-        return lb
-    }()
+    lazy private var emailTextField = UITextFieldDefault(placeholder: "Email", keyboardType: .emailAddress)
+    lazy private var passowrdTextField = UITextFieldDefault(placeholder: "Informe sua senha")
     
-    lazy private var emailTextField: UITextField = {
-        let tf = UITextField()
-        tf.translatesAutoresizingMaskIntoConstraints = false
-        tf.backgroundColor = .opaqueSeparator
-        tf.placeholder = "informe seu e-mail"
-        tf.setCornerRadius(color: UIColor.black.cgColor, width: 0.5, radius: 10)
-        
-        return tf
-    }()
-    
-    lazy private var passwordLabel: UILabel = {
-        let lb = UILabel()
-        lb.text = "Password"
-        lb.translatesAutoresizingMaskIntoConstraints = false
-        
-        return lb
-    }()
-    
-    lazy private var passowrdTextField: UITextField = {
-        let tf = UITextField()
-        tf.translatesAutoresizingMaskIntoConstraints = false
-        tf.setCornerRadius(color: UIColor.black.cgColor, width: 0.5, radius: 10)
-        tf.backgroundColor = .opaqueSeparator
-        tf.placeholder = "informe sua senha"
-        
-        return tf
-    }()
-    
-    lazy private var loginButton: UIButton = {
-        let bt = UIButton()
-        bt.translatesAutoresizingMaskIntoConstraints = false
-        bt.setTitle("Entrar", for: .normal)
-        bt.backgroundColor = .systemMint
-        bt.setCornerRadius(radius: 10)
-        bt.isEnabled = true
-        
-        return bt
-    }()
-    
+    lazy private var loginButton = UIButtonDefault(title: "Entrar", color: .systemMint, isEnabled: true)
+    lazy private var registerButton = UIButtonDefault(title: "Registrar", color: .systemMint)
     
     
     //MARK: - Inits
@@ -84,17 +43,13 @@ final class LoginView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
-    
-    
-    
-    
     //MARK: - Setup Visual Components
     private func setupVisualComponents() {
         setupTitle()
         setupEmail()
         setupPassword()
         setupLoginButton()
+        setupRegisterButton()
     }
     
     private func setupTitle() {
@@ -156,26 +111,30 @@ final class LoginView: UIView {
             loginButton.heightAnchor.constraint(equalToConstant: 40),
         ])
         
-        loginButton.addTarget(self, action: #selector(myTargetChangeViewControllerFunction), for: .touchUpInside)
+        loginButton.addTarget(self, action: #selector(myTargetButtton), for: .touchUpInside)
     }
     
-    @objc func myTargetChangeViewControllerFunction() {
-        let controller = LoginViewController()
-        controller.modalPresentationStyle = .fullScreen
-        controller.present(HomeViewController(), animated: true)
-        print("button tapped")
+    @objc func myTargetButtton() {
+        delegate?.targetLoginButtonPresentHomeVC()
+        print("tapped button")
     }
     
-    func showViewController(vc: UIViewController) {
-        let vc = vc
-        let scenes = UIApplication.shared.connectedScenes
-        let windowScene = scenes.first as? UIWindowScene
-        let window = windowScene?.windows.first
-        window?.rootViewController = UINavigationController(rootViewController: vc)
-        window?.makeKeyAndVisible()
+    private func setupRegisterButton() {
+        self.addSubview(registerButton)
+        
+        NSLayoutConstraint.activate([
+            registerButton.topAnchor.constraint(equalTo: loginButton.bottomAnchor, constant: 24),
+            registerButton.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 24),
+            registerButton.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -24),
+            registerButton.heightAnchor.constraint(equalToConstant: 40),
+        ])
     }
+    
     
 }
+
+
+
 
 private extension LoginView {
     
