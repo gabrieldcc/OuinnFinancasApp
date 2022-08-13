@@ -29,16 +29,21 @@
 		656DF56828A3F5370056F94B /* GastosFixosDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656DF56728A3F5370056F94B /* GastosFixosDao.swift */; };
 		656DF56E28A44FCC0056F94B /* InvestimentosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656DF56C28A44FCC0056F94B /* InvestimentosTableViewCell.swift */; };
 		656DF56F28A44FCC0056F94B /* InvestimentosTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 656DF56D28A44FCC0056F94B /* InvestimentosTableViewCell.xib */; };
-		656DF57228A453010056F94B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656DF57128A453010056F94B /* LoginView.swift */; };
-		656DF57428A4533A0056F94B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656DF57328A4533A0056F94B /* LoginViewController.swift */; };
-		656DF57628A456430056F94B /* ViewCodeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656DF57528A456430056F94B /* ViewCodeProtocol.swift */; };
 		656DF57928A5434C0056F94B /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656DF57828A5434C0056F94B /* Validator.swift */; };
 		656DF57B28A54F8A0056F94B /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656DF57A28A54F8A0056F94B /* UIView+.swift */; };
 		656DF58328A5C1AE0056F94B /* LabelDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656DF58228A5C1AE0056F94B /* LabelDefault.swift */; };
 		656DF58528A5C6300056F94B /* TextFieldDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656DF58428A5C6300056F94B /* TextFieldDefault.swift */; };
 		656DF58728A5CAD70056F94B /* ButtonDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656DF58628A5CAD70056F94B /* ButtonDefault.swift */; };
 		656DF58928A696BC0056F94B /* ViewControllerDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656DF58828A696BC0056F94B /* ViewControllerDefault.swift */; };
-		656DF58C28A6B9A50056F94B /* RegisterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656DF58B28A6B9A50056F94B /* RegisterCoordinator.swift */; };
+		656DF58C28A6B9A50056F94B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656DF58B28A6B9A50056F94B /* Coordinator.swift */; };
+		656DF58E28A6BBE90056F94B /* RegisterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656DF58D28A6BBE90056F94B /* RegisterCoordinator.swift */; };
+		656DF59128A6BDEF0056F94B /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656DF59028A6BDEF0056F94B /* LoginCoordinator.swift */; };
+		656DF59328A6C9560056F94B /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656DF59228A6C9560056F94B /* HomeCoordinator.swift */; };
+		656DF59C28A6F7610056F94B /* UIViewCodeDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656DF59B28A6F7600056F94B /* UIViewCodeDefault.swift */; };
+		656DF5E028A7CD720056F94B /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656DF5DE28A7CD710056F94B /* RegisterViewController.swift */; };
+		656DF5E128A7CD720056F94B /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 656DF5DF28A7CD710056F94B /* RegisterViewController.xib */; };
+		656DF5E428A7DB680056F94B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656DF5E228A7DB680056F94B /* LoginViewController.swift */; };
+		656DF5E528A7DB680056F94B /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 656DF5E328A7DB680056F94B /* LoginViewController.xib */; };
 		65A3258B2854FEF400A51086 /* GastosFixosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A325892854FEF400A51086 /* GastosFixosTableViewCell.swift */; };
 		65A3258C2854FEF500A51086 /* GastosFixosTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65A3258A2854FEF400A51086 /* GastosFixosTableViewCell.xib */; };
 		65A3258F2857934500A51086 /* Alerta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A3258E2857934500A51086 /* Alerta.swift */; };
@@ -98,16 +103,21 @@
 		656DF56728A3F5370056F94B /* GastosFixosDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GastosFixosDao.swift; sourceTree = "<group>"; };
 		656DF56C28A44FCC0056F94B /* InvestimentosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestimentosTableViewCell.swift; sourceTree = "<group>"; };
 		656DF56D28A44FCC0056F94B /* InvestimentosTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InvestimentosTableViewCell.xib; sourceTree = "<group>"; };
-		656DF57128A453010056F94B /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		656DF57328A4533A0056F94B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		656DF57528A456430056F94B /* ViewCodeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCodeProtocol.swift; sourceTree = "<group>"; };
 		656DF57828A5434C0056F94B /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		656DF57A28A54F8A0056F94B /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		656DF58228A5C1AE0056F94B /* LabelDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelDefault.swift; sourceTree = "<group>"; };
 		656DF58428A5C6300056F94B /* TextFieldDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldDefault.swift; sourceTree = "<group>"; };
 		656DF58628A5CAD70056F94B /* ButtonDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonDefault.swift; sourceTree = "<group>"; };
 		656DF58828A696BC0056F94B /* ViewControllerDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerDefault.swift; sourceTree = "<group>"; };
-		656DF58B28A6B9A50056F94B /* RegisterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCoordinator.swift; sourceTree = "<group>"; };
+		656DF58B28A6B9A50056F94B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		656DF58D28A6BBE90056F94B /* RegisterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCoordinator.swift; sourceTree = "<group>"; };
+		656DF59028A6BDEF0056F94B /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		656DF59228A6C9560056F94B /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		656DF59B28A6F7600056F94B /* UIViewCodeDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewCodeDefault.swift; sourceTree = "<group>"; };
+		656DF5DE28A7CD710056F94B /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		656DF5DF28A7CD710056F94B /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		656DF5E228A7DB680056F94B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		656DF5E328A7DB680056F94B /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		65A325892854FEF400A51086 /* GastosFixosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GastosFixosTableViewCell.swift; sourceTree = "<group>"; };
 		65A3258A2854FEF400A51086 /* GastosFixosTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GastosFixosTableViewCell.xib; sourceTree = "<group>"; };
 		65A3258E2857934500A51086 /* Alerta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerta.swift; sourceTree = "<group>"; };
@@ -203,7 +213,6 @@
 			isa = PBXGroup;
 			children = (
 				65A4E7652847D2DA00B65279 /* AppDelegate */,
-				656DF57728A458010056F94B /* Protocols */,
 				656DF56528A3F5110056F94B /* Resources */,
 				6526D30128649D560044DFD7 /* Extensions */,
 				656DF58028A5C1570056F94B /* Infrastructure */,
@@ -363,18 +372,10 @@
 		656DF57028A452E10056F94B /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				656DF57128A453010056F94B /* LoginView.swift */,
-				656DF57328A4533A0056F94B /* LoginViewController.swift */,
+				656DF5E228A7DB680056F94B /* LoginViewController.swift */,
+				656DF5E328A7DB680056F94B /* LoginViewController.xib */,
 			);
 			path = Login;
-			sourceTree = "<group>";
-		};
-		656DF57728A458010056F94B /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				656DF57528A456430056F94B /* ViewCodeProtocol.swift */,
-			);
-			path = Protocols;
 			sourceTree = "<group>";
 		};
 		656DF58028A5C1570056F94B /* Infrastructure */ = {
@@ -392,6 +393,7 @@
 				656DF58428A5C6300056F94B /* TextFieldDefault.swift */,
 				656DF58628A5CAD70056F94B /* ButtonDefault.swift */,
 				656DF58828A696BC0056F94B /* ViewControllerDefault.swift */,
+				656DF59B28A6F7600056F94B /* UIViewCodeDefault.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -399,9 +401,21 @@
 		656DF58A28A6B9760056F94B /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
-				656DF58B28A6B9A50056F94B /* RegisterCoordinator.swift */,
+				656DF58B28A6B9A50056F94B /* Coordinator.swift */,
+				656DF59028A6BDEF0056F94B /* LoginCoordinator.swift */,
+				656DF58D28A6BBE90056F94B /* RegisterCoordinator.swift */,
+				656DF59228A6C9560056F94B /* HomeCoordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		656DF59428A6C9E50056F94B /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				656DF5DE28A7CD710056F94B /* RegisterViewController.swift */,
+				656DF5DF28A7CD710056F94B /* RegisterViewController.xib */,
+			);
+			path = Register;
 			sourceTree = "<group>";
 		};
 		65A325882854FE3000A51086 /* Cells */ = {
@@ -428,6 +442,7 @@
 			isa = PBXGroup;
 			children = (
 				656DF57028A452E10056F94B /* Login */,
+				656DF59428A6C9E50056F94B /* Register */,
 				65479CCF284A800A00E9CF13 /* Home */,
 				65479CD2284A80EA00E9CF13 /* Gastos Fixos  */,
 			);
@@ -565,7 +580,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				656DF5E128A7CD720056F94B /* RegisterViewController.xib in Resources */,
 				65426AEC2842713F006B87E4 /* LaunchScreen.storyboard in Resources */,
+				656DF5E528A7DB680056F94B /* LoginViewController.xib in Resources */,
 				65A4E7692848048300B65279 /* HomeTableViewHeader.xib in Resources */,
 				65A3258C2854FEF500A51086 /* GastosFixosTableViewCell.xib in Resources */,
 				65A4E7712848EFE000B65279 /* HomeGastosFixosTableViewCell.xib in Resources */,
@@ -701,32 +718,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				656DF57628A456430056F94B /* ViewCodeProtocol.swift in Sources */,
-				656DF57428A4533A0056F94B /* LoginViewController.swift in Sources */,
+				656DF59128A6BDEF0056F94B /* LoginCoordinator.swift in Sources */,
 				65426AE12842713D006B87E4 /* HomeViewControllerViewController.swift in Sources */,
+				656DF59328A6C9560056F94B /* HomeCoordinator.swift in Sources */,
 				65A4E7672847D3EB00B65279 /* DolarAPI.swift in Sources */,
 				656DF56828A3F5370056F94B /* GastosFixosDao.swift in Sources */,
+				656DF5E428A7DB680056F94B /* LoginViewController.swift in Sources */,
 				656DF58528A5C6300056F94B /* TextFieldDefault.swift in Sources */,
 				65A3258F2857934500A51086 /* Alerta.swift in Sources */,
 				656DF58728A5CAD70056F94B /* ButtonDefault.swift in Sources */,
 				65426ADD2842713D006B87E4 /* AppDelegate.swift in Sources */,
 				65A3258B2854FEF400A51086 /* GastosFixosTableViewCell.swift in Sources */,
+				656DF59C28A6F7610056F94B /* UIViewCodeDefault.swift in Sources */,
 				65426AE72842713D006B87E4 /* ConsumindoFinancasAPI.xcdatamodeld in Sources */,
 				656DF57B28A54F8A0056F94B /* UIView+.swift in Sources */,
 				65A4E7702848EFE000B65279 /* HomeGastosFixosTableViewCell.swift in Sources */,
 				65426ADF2842713D006B87E4 /* SceneDelegate.swift in Sources */,
 				6526D2BF28638F450044DFD7 /* NSUIColor+Hex.swift in Sources */,
-				656DF58C28A6B9A50056F94B /* RegisterCoordinator.swift in Sources */,
+				656DF58C28A6B9A50056F94B /* Coordinator.swift in Sources */,
 				656DF58328A5C1AE0056F94B /* LabelDefault.swift in Sources */,
 				656DF57928A5434C0056F94B /* Validator.swift in Sources */,
-				656DF57228A453010056F94B /* LoginView.swift in Sources */,
 				656B2739284E323E00183912 /* GastosFixos.swift in Sources */,
+				656DF58E28A6BBE90056F94B /* RegisterCoordinator.swift in Sources */,
 				656DF58928A696BC0056F94B /* ViewControllerDefault.swift in Sources */,
 				65479CDA284A84C900E9CF13 /* GastosFixosViewController.swift in Sources */,
 				656DF56E28A44FCC0056F94B /* InvestimentosTableViewCell.swift in Sources */,
 				656B2735284E249400183912 /* GastosFixosViewModel.swift in Sources */,
 				656B2733284AA88700183912 /* GastosFixosHeader.swift in Sources */,
 				65A4E76B284806B100B65279 /* HomeTableViewHeader.swift in Sources */,
+				656DF5E028A7CD720056F94B /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

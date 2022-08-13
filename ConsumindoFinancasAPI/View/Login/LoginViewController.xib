@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="ConsumindoFinancasAPI" customModuleProvider="target">
+            <connections>
+                <outlet property="emailTextField" destination="7wy-0x-I9y" id="Z9f-QC-I8q"/>
+                <outlet property="loginButton" destination="bRi-I6-cem" id="AOu-e6-bTe"/>
+                <outlet property="passwordTextField" destination="xYg-XI-qaC" id="Woq-0c-KnZ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Insira seu e-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7wy-0x-I9y">
+                    <rect key="frame" x="24" y="206" width="366" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <action selector="emailTextFieldEditing:" destination="-1" eventType="editingChanged" id="VIi-Sk-hna"/>
+                    </connections>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Insira sua senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xYg-XI-qaC">
+                    <rect key="frame" x="24" y="309" width="366" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zNl-Mk-09h">
+                    <rect key="frame" x="24" y="92" width="366" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bRi-I6-cem">
+                    <rect key="frame" x="24" y="391" width="366" height="31"/>
+                    <color key="backgroundColor" red="0.0" green="1" blue="0.92180803570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Entrar">
+                        <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="loginButton:" destination="-1" eventType="touchUpInside" id="ASc-79-BKB"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iw5-rw-ELj">
+                    <rect key="frame" x="24" y="446" width="366" height="31"/>
+                    <color key="backgroundColor" red="0.0" green="1" blue="0.92698979589999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Registrar">
+                        <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="registerButton:" destination="-1" eventType="touchUpInside" id="aKL-Vc-pos"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Senha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eev-Ma-MEE">
+                    <rect key="frame" x="24" y="264" width="366" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oCr-Os-Hxx">
+                    <rect key="frame" x="24" y="161" width="366" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="7wy-0x-I9y" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="3fl-JT-dlJ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xYg-XI-qaC" secondAttribute="trailing" constant="24" id="3sB-gN-8Uz"/>
+                <constraint firstItem="oCr-Os-Hxx" firstAttribute="top" secondItem="zNl-Mk-09h" secondAttribute="bottom" constant="48" id="Hd4-iy-qt7"/>
+                <constraint firstItem="iw5-rw-ELj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="P3H-v5-eX9"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="oCr-Os-Hxx" secondAttribute="trailing" constant="24" id="P9Y-CC-p1M"/>
+                <constraint firstItem="iw5-rw-ELj" firstAttribute="top" secondItem="bRi-I6-cem" secondAttribute="bottom" constant="24" id="Rhv-lq-UHi"/>
+                <constraint firstItem="zNl-Mk-09h" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="SZF-4P-dio"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bRi-I6-cem" secondAttribute="trailing" constant="24" id="TIW-aR-c5R"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Eev-Ma-MEE" secondAttribute="trailing" constant="24" id="UQT-a0-Jmm"/>
+                <constraint firstItem="bRi-I6-cem" firstAttribute="top" secondItem="xYg-XI-qaC" secondAttribute="bottom" constant="48" id="XL5-Ze-8S7"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="zNl-Mk-09h" secondAttribute="trailing" constant="24" id="XtR-Hb-UCb"/>
+                <constraint firstItem="Eev-Ma-MEE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="YNf-zl-qjp"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="iw5-rw-ELj" secondAttribute="trailing" constant="24" id="a4r-p9-uaa"/>
+                <constraint firstItem="Eev-Ma-MEE" firstAttribute="top" secondItem="7wy-0x-I9y" secondAttribute="bottom" constant="24" id="eIg-BD-MDi"/>
+                <constraint firstItem="xYg-XI-qaC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="gpP-rN-g21"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="7wy-0x-I9y" secondAttribute="trailing" constant="24" id="mkG-HW-wkU"/>
+                <constraint firstItem="oCr-Os-Hxx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="rpZ-ez-qDJ"/>
+                <constraint firstItem="7wy-0x-I9y" firstAttribute="top" secondItem="oCr-Os-Hxx" secondAttribute="bottom" constant="24" id="see-IL-ZtP"/>
+                <constraint firstItem="xYg-XI-qaC" firstAttribute="top" secondItem="Eev-Ma-MEE" secondAttribute="bottom" constant="24" id="vJm-M3-hB9"/>
+                <constraint firstItem="bRi-I6-cem" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="vpv-5A-efk"/>
+                <constraint firstItem="zNl-Mk-09h" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="48" id="z8Y-W5-lNV"/>
+            </constraints>
+            <point key="canvasLocation" x="133" y="83"/>
+        </view>
+    </objects>
+</document>

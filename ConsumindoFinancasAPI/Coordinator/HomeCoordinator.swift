@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class RegisterCoordinator: Coordinator {
+class HomeCoordinator: Coordinator {
     
     let navigationcontroller: UINavigationController
     
@@ -17,7 +17,7 @@ class RegisterCoordinator: Coordinator {
     }
     
     func start() {
-        let viewController = RegisterViewController()
+        let viewController = HomeViewController()
         self.navigationcontroller.pushViewController(viewController, animated: true)
     }
     

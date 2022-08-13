@@ -9,7 +9,7 @@ import UIKit
 
 class UIButtonDefault: UIButton {
     
-    init(title: String, color: UIColor, radius: CGFloat = 10, isEnabled: Bool = false) {
+    init(title: String, color: UIColor, radius: CGFloat = 10, isEnabled: Bool = true) {
         super.init(frame: .zero)
         initDefault(title: title, color: color, radius: radius, isEnabled: isEnabled)
     }

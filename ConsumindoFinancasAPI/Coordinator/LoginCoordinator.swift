@@ -1,14 +1,13 @@
 //
-//  RegisterCoordinator.swift
+//  LoginCoordinator.swift
 //  ConsumindoFinancasAPI
 //
 //  Created by Gabriel de Castro Chaves on 12/08/22.
 //
 
-import Foundation
 import UIKit
 
-class RegisterCoordinator: Coordinator {
+class LoginCoordinator: Coordinator {
     
     let navigationcontroller: UINavigationController
     
@@ -17,9 +16,16 @@ class RegisterCoordinator: Coordinator {
     }
     
     func start() {
-        let viewController = RegisterViewController()
+        let viewController = LoginViewController()
+        //viewController.onLoginTap = {
+            self.showRegisterVC()
+        //}
         self.navigationcontroller.pushViewController(viewController, animated: true)
     }
     
+    private func showRegisterVC() {
+        let coordinator = RegisterCoordinator(navigationcontroller: self.navigationcontroller)
+        coordinator.start()
+    }
     
 }
